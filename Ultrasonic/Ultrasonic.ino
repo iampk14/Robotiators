@@ -59,6 +59,7 @@ void loop()
   digitalWrite(trig1,LOW);
   duration1=pulseIn(echo1,HIGH);
   distance1= 0.034*(duration1/2);
+  delayMicroseconds(10);
   
   digitalWrite(trig2,LOW);
   delayMicroseconds(2);
@@ -67,6 +68,7 @@ void loop()
   digitalWrite(trig2,LOW);
   duration2=pulseIn(echo2,HIGH);
   distance2=0.034*(duration2/2);
+  delayMicroseconds(10);
 
   if((distance1 >= 7) && (distance1<=30) && (distance2 >=7) && (distance2 <=30))
   {
